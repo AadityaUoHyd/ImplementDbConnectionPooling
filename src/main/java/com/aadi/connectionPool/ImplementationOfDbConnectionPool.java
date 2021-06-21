@@ -26,6 +26,16 @@ public class ImplementationOfDbConnectionPool {
 		}
 	}
 	
+	public void addMoreConnection(String dbUrl, String username, String password, int more) {
+		for(int i=0; i<more; i++) {
+			try {
+				this.availableConnections.add(ConnectionUtil.createDBConnection(dbUrl,username,password));
+			} catch(Exception e) {
+				e.printStackTrace();
+			}
+		}
+	}
+	
 	public Connection retrieveConnection() {
 		Connection connection = null;
 		if(availableConnections.isEmpty()) {
