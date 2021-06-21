@@ -9,6 +9,6 @@
 - Add PostgreSQL connector dependency in your pom.xml
 (I’m using PostgreSQL, one can use any SQL database).
 
-- ![](https://github.com/AadityaUoHyd/implementConnectionPooling/blob/master/cp.jpg?raw=true)
+![](https://github.com/AadityaUoHyd/implementConnectionPooling/blob/master/cp.jpg?raw=true)
 
 - In real time, we never create our own connection pool unless one have some sort of custom requirement. We use 3rd party connection pool such as - Apache DPCP, C3, HikariCP, etc.
